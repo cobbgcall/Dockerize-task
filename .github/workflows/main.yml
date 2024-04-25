@@ -1,4 +1,12 @@
 name: Scan with syft
-uses: anchore/sbom-action@v0.15.10
-with:
-  image: cobbgcloud/timeoff:29
+on:
+  workflow_dispatch:
+
+jobs:
+  docker-scan:
+    
+    steps:
+
+      uses: anchore/sbom-action@v0.15.10
+      with:
+        image: cobbgcloud/timeoff:29
