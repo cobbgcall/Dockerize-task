@@ -13,6 +13,6 @@ jobs:
         image: cobbgcloud/timeoff:29
 
     - name: publishing SBOMs
-      uses: anchore/sbom-action/publish-sbom@v0.15.10
+      uses: anchore/sbom-action/publish-sbom@v4
       with:
         sbom-artifact-match: ".*\\.spdx$"
