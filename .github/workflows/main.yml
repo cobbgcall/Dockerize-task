@@ -1,4 +1,5 @@
 name: Demo
+run-name: ${{ github.actor }}
 on: [push]
 
 jobs:
@@ -10,3 +11,8 @@ jobs:
       uses: anchore/sbom-action@v0.15.10
       with:
         image: cobbgcloud/timeoff:29
+
+    - name: publishing SBOMs
+      uses: anchore/sbom-action/publish-sbom@v0.15.10
+      with:
+        sbom-artifact-match: ".*\\.spdx$"
