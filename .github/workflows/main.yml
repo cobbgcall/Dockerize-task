@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   syft:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     
     steps:
     - name: scan with syft
