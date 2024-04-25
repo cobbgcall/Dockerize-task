@@ -1,1 +1,4 @@
-name: task-image
+name: Scan with syft
+uses: anchore/sbom-action@v0.15.10
+with:
+  image: cobbgcloud/timeoff:29
