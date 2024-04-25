@@ -5,8 +5,8 @@ jobs:
   syft:
     runs-on: ubuntu-lastest
     
-  steps:
-    - name: Scan with syft
+    steps:
+    - name: scan with syft
       uses: anchore/sbom-action@v0.15.10
       with:
         image: cobbgcloud/timeoff:29
