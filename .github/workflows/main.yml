@@ -3,8 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  docker-scan:
-    
+  uses:
     steps:
       - name: Scan with syft
         uses: anchore/sbom-action@v0.15.10
