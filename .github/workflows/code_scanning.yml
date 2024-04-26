@@ -1,0 +1,22 @@
+name: Demo
+run-name: ${{ github.actor }}
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  grype:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: anchore/scan-action@v3
+      id: scan
+      with:
+        image: "cobbgcloud/timeoff:29"
+        fail-build: false
+    
+    - name: Upload Sarif report.
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        sarif_file: ${{ steps.scan.outputs.sarif }}
