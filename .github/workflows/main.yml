@@ -18,4 +18,4 @@ jobs:
       with:
         sbom: cobbgcloud-timeoff_29.spdx.json
         fail-build: true
-        several-cutoff: critical
+        severity-cutoff: critical
