@@ -11,7 +11,7 @@ jobs:
       uses: anchore/scan-action@v3.6.4
       id: scan
       with:
-        image: "alpine:latest"
+        image: "jenkins/jenkins:latest"
         fail-build: false
         severity-cutoff: "critical"
         output-format: "sarif"
