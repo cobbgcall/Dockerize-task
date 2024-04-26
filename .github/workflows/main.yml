@@ -12,8 +12,4 @@ jobs:
       with:
         image: cobbgcloud/timeoff:29
       id: myid
-
-    - name: Upload SBOMs
-      uses: anchore/sbom-action/publish-sbom@v0.15.10
-      with:
-        sbom-artifact-match: ".*\\.spdx$"
+      artifact-name: ${{ id }}
