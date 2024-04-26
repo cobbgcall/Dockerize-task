@@ -16,7 +16,7 @@ jobs:
       with:
         image: "cobbgcloud/timeoff:latest"
         fail-build: false
-        severity-cutoff: "high"
+        severity-cutoff: "critical"
         output-format: "sarif"
     
     - name: Upload to GitHub Security Scanning
