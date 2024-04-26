@@ -12,4 +12,3 @@ jobs:
       with:
         image: cobbgcloud/timeoff:29
       id: myid
-      artifact-name: ${{ id }}
