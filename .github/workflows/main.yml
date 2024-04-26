@@ -12,7 +12,7 @@ jobs:
       id: scan
       with:
         image: cobbgcloud/timeoff:latest
-        fail-build: false
+        fail-build: true
         severity-cutoff: 'critical'
         only-fixed: true
     
