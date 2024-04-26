@@ -13,8 +13,8 @@ jobs:
         image: cobbgcloud/timeoff:29
         fail-build: false
         severity-cutoff: critical
-        output-format: 'grype_result.sarif'
+        output-format: 'sarif'
     - name: Upload to GitHub Security Scanning
       uses: github/codeql-action/upload-sarif@v3
       with:
-        sarif_file: 'grype_result.sarif'
+        sarif_file: ${{ steps.scan.outputs.sarif }}
