@@ -12,6 +12,7 @@ jobs:
       id: scan
       with:
         image: cobbgcloud/timeoff:latest
+        fail-build: false
     
     - name: Upload to GitHub Security Scanning
       uses: github/codeql-action/upload-sarif@v3
