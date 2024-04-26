@@ -12,3 +12,8 @@ jobs:
       with:
         image: cobbgcloud/timeoff:29
       id: myid
+
+    - name: scan SBOMs with grype
+      uses: anchoce/scan-action@v3.6.4
+      with:
+        sbom: cobbgcloud-timeoff_29.spdx.json
