@@ -16,6 +16,6 @@ jobs:
     - name: scan SBOMs with grype
       uses: anchore/scan-action@v3.6.4
       with:
-        sbom: ${{ myid }}.spdx.json
+        sbom: ./cobbgcloud-timeoff_29.spdx.json
         fail-build: true
         severity-cutoff: critical
