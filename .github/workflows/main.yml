@@ -11,8 +11,9 @@ jobs:
       uses: anchore/sbom-action@v0.15.10
       with:
         image: cobbgcloud/timeoff:29
+      id: myid
 
-    - name: publishing SBOMs
+    - name: Upload SBOMs
       uses: anchore/sbom-action/publish-sbom@v0.15.10
       with:
         sbom-artifact-match: ".*\\.spdx$"
