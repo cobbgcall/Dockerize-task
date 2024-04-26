@@ -7,15 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: scan with syft
-      uses: anchore/sbom-action@v0.15.10
-      with:
-        image: cobbgcloud/timeoff:29
-      id: myid
-
-    - name: scan SBOMs with grype
+    - name: scan with grype
       uses: anchore/scan-action@v3.6.4
       with:
-        sbom: ./cobbgcloud-timeoff_29.spdx.json
+        image: cobbgcloud/timeoff:29
         fail-build: true
         severity-cutoff: critical
