@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: anchore/scan-action@v3
+    - name: Scan with Grype
+      uses: anchore/scan-action@v3.6.5
       id: scan
       with:
         image: "cobbgcloud/timeoff:29"
