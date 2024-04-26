@@ -7,11 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: scan with grype
+    - name: Scan with Grype
       uses: anchore/scan-action@v3.6.4
+      id: scan
       with:
-        image: alpine:latest
+        image: cobbgcloud/timeoff:latest
         fail-build: false
+        only-fixed: true
     - name: Upload to GitHub Security Scanning
       uses: github/codeql-action/upload-sarif@v3
       with:
