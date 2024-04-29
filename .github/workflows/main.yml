@@ -1,4 +1,4 @@
-name: Demo
+name: CONTAINER_IMAGE_CI
 run-name: ${{ github.actor }}
 on: 
   push:
