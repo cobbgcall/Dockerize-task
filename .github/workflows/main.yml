@@ -15,11 +15,12 @@ jobs:
       with:
         ref: main
 
-    - name: Build container image
-      uses: docker/setup-buildx-action@v3
+    - name: Build and push container image to local
+      uses: docker/build-push-action@v5
       with:
         context: .
-        tags: cobbgcloud/timeoff:latest
+        push: true
+        tags: localhost:5000/cobbgcloud/timeoff:latest
         
     - name: Scan with Grype
       uses: anchore/scan-action@v3.6.4
