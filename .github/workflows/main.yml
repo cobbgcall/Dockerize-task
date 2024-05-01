@@ -1,7 +1,7 @@
 name: CONTAINER_IMAGE_CI
 run-name: ${{ github.actor }}
-on: 
-  workflow_dispatch
+on:
+  workflow_dispatch:
 
 jobs:
   app_container:
