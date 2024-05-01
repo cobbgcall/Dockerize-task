@@ -1,9 +1,7 @@
 name: CONTAINER_IMAGE_CI
 run-name: ${{ github.actor }}
 on: 
-  push:
-    branches:
-      - main
+  workflow_dispatch
 
 jobs:
   app_container:
@@ -38,3 +36,5 @@ jobs:
       uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: ${{ steps.scan.outputs.sarif }}
+
+    - name: 
