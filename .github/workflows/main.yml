@@ -1,6 +1,9 @@
 name: CONTAINER_IMAGE_CI
 run-name: ${{ github.actor }}
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
