@@ -18,7 +18,7 @@ jobs:
     - name: Build container image
       uses: docker/setup-buildx-action@v3
       with:
-        tag: cobbgcloud/timeoff:latest
+        tags: cobbgcloud/timeoff:latest
         
     - name: Scan with Grype
       uses: anchore/scan-action@v3.6.4
