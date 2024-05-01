@@ -8,6 +8,11 @@ on:
 jobs:
   app_container:
     runs-on: ubuntu-latest
+    services:
+      registry:
+        image: registry:2
+        ports:
+          - 5000:5000
     
     steps:
     - name: Checkout main branch
@@ -26,7 +31,7 @@ jobs:
       uses: anchore/scan-action@v3.6.4
       id: scan
       with:
-        image: "cobbgcloud/timeoff:latest"
+        image: localhost:5000/cobbgcloud/timeoff:latest
         fail-build: false
     
     - name: Upload Sarif report.
