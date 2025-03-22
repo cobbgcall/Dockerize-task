@@ -1,4 +1,4 @@
-# Dockerize Task
+# Build Taskfile.dev container image 
 
 This repository contains an unofficial Dockerfile for [Task](https://taskfile.dev/), a simple and efficient task manager that is highly useful for automating CI/CD processes.
 
