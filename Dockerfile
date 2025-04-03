@@ -17,7 +17,8 @@ RUN apt-get clean autoclean && \
 WORKDIR /taskCI
 
 RUN sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d 
- ### Copy the task file
+
+### Add task to PATH
 USER taskUser
 RUN echo 'export PATH=$PATH:/taskCI/bin' >> ~/.bashrc   
 
